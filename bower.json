@@ -1,0 +1,24 @@
+{
+  "name": "angular-downloader",
+  "version": "0.1.1",
+  "description": "A downloader directive for angularjs.",
+  "authors": [
+    "Dario Andrei <wouldgo84@gmail.com>",
+    "Filippo Oretti <filippo.oretti@gmail.com"
+  ],
+  "keywords": [
+    "download",
+    "ajax",
+    "blob"
+  ],
+  "license": "MIT",
+  "homepage": "none-atm",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

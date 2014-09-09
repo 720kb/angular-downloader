@@ -1,0 +1,37 @@
+{
+  "name": "angular-downloader",
+  "version": "0.1.1",
+  "description": "A downloader directive for angularjs.",
+  "homepage": "none-atm",
+  "keywords": [
+    "download",
+    "ajax",
+    "blob"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "none-atm"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "connect-modrewrite": "*",
+    "grunt": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-eslint": "*"
+  },
+  "author": {
+    "name": "Dario Andrei",
+    "email": "wouldgo84@gmail.com",
+    "url": "https://github.com/wouldgo"
+  },
+  "contributors": [
+    {
+      "name": "Filippo Oretti",
+      "email": "filippo.oretti@gmail.com",
+      "url": "https://github.com/45kb"
+    }
+  ]
+}
