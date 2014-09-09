@@ -4,29 +4,40 @@
       'restrict': 'A',
       'link': function (scope, elem, attrs) {
 
-        scope.$watch(attrs.downloader, function (newValue) {
-          var excelElementToDownload
-            , newElem;
-          if (newValue &&
-            newValue.contentType &&
-            newValue.objectUrl &&
-            newValue.fileName) {
+        if(attrs.downloader && 
+          attrs.downloaderClass) {
 
-            excelElementToDownload = $document[0].createElement('a');
-            excelElementToDownload.download = newValue.fileName;
-            excelElementToDownload.href = newValue.objectUrl;
-            excelElementToDownload.textContent = 'Download ready';
-            excelElementToDownload.target = '_self';
+          scope.$watch(attrs.downloader, function (newValue) {
+            var excelElementToDownload
+              , newElem;
+            if (newValue &&
+              newValue.contentType &&
+              newValue.objectUrl &&
+              newValue.fileName) {
 
-            excelElementToDownload.dataset.downloadurl = [newValue.contentType, excelElementToDownload.download, excelElementToDownload.href].join(':');
-            excelElementToDownload.draggable = true;
-            excelElementToDownload.classList.add('dragout');
+              excelElementToDownload = $document[0].createElement('a');
+              excelElementToDownload.download = newValue.fileName;
+              excelElementToDownload.href = newValue.objectUrl;
+              excelElementToDownload.textContent = 'Download pronto';
+              excelElementToDownload.target = '_self';
 
-            newElem = $compile(excelElementToDownload)(scope);
-            newElem.off('click');
-            elem.after(newElem);
-          }
-        });
+              excelElementToDownload.dataset.downloadurl = [newValue.contentType, excelElementToDownload.download, excelElementToDownload.href].join(':');
+              excelElementToDownload.draggable = true;
+
+              
+              angular.forEach(attrs.downloaderClass.split(' '), function (value) {
+
+                excelElementToDownload.classList.add(value);
+              });
+
+              excelElementToDownload.classList.add('dragout');
+              
+              newElem = $compile(excelElementToDownload)(scope);
+              newElem.off('click');
+              elem.replaceWith(newElem);
+            }
+          });
+        }
       }
     };
-  }])
+  }]);
