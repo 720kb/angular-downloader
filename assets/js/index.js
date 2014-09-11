@@ -4,8 +4,17 @@
   'use strict';
 
   angular.module('720kb', [
-    '720kb.downloader'
+    'ngRoute',
+    '720kb.downloader',
+    'hljs'
   ])
+  .config(['hljsServiceProvider', function (hljsServiceProvider) {
+
+    hljsServiceProvider.setOptions({
+      // replace tab with 4 spaces
+      tabReplace: ''
+    });
+  }])
   .controller('DownloaderController', ['$scope', '$http', function DownloaderController($scope, $http) {
 
     $scope.downloadStuffFromAjax = function downloadStuffFromAjax() {
