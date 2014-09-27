@@ -1,5 +1,5 @@
-/*global module, require*/
-(function setUp(module, require) {
+/*global module*/
+(function setUp(module) {
 
   var banner = ['/*!',
       ' * Angular Downloader v<%= pkg.version %>',
@@ -8,8 +8,7 @@
       ' * www.opensource.org/licenses/MIT',
       ' *',
       ' * <%= grunt.template.today("yyyy-mm-dd") %>',
-      ' */\n\n'].join('\n')
-    , modRewrite = require('connect-modrewrite');
+      ' */\n\n'].join('\n');
 
   module.exports = function doGrunt(grunt) {
 
@@ -45,74 +44,14 @@
             ]
           }
         }
-      },
-      'connect': {
-        'server': {
-          'options': {
-            'port': '<%= confs.serverPort %>',
-            'base': '.',
-            'keepalive': true,
-            'middleware': function manageMiddlewares(connect, options) {
-              var middlewares = []
-                , directory = options.directory || options.base[options.base.length - 1];
-
-              // enable Angular's HTML5 mode
-              middlewares.push(modRewrite(['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.gif$ /index.html [L]']));
-
-              if (!Array.isArray(options.base)) {
-                options.base = [options.base];
-              }
-              options.base.forEach(function forEachOption(base) {
-                // Serve static files.
-                middlewares.push(connect.static(base));
-              });
-
-              // Make directory browse-able.
-              middlewares.push(connect.directory(directory));
-
-              return middlewares;
-            }
-          }
-        }
-      },
-      'watch': {
-        'dev': {
-          'files': [
-            'Gruntfile.js',
-            '<%= confs.js %>/**/*.js'
-          ],
-          'tasks': [
-            'eslint'
-          ],
-          'options': {
-            'spawn': false
-          }
-        }
-      },
-      'concurrent': {
-        'dev': {
-          'tasks': [
-            'connect:server',
-            'watch:dev'
-          ],
-          'options': {
-            'limit': '<%= concurrent.dev.tasks.length %>',
-            'logConcurrentOutput': true
-          }
-        }
       }
     });
 
     grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-
     grunt.registerTask('default', [
-      'eslint',
-      'concurrent:dev'
+      'eslint'
     ]);
 
     grunt.registerTask('prod', [
@@ -120,4 +59,4 @@
       'uglify'
     ]);
   };
-}(module, require));
+}(module));
