@@ -17,6 +17,12 @@
   }])
   .controller('DownloaderController', ['$scope', '$http', function DownloaderController($scope, $http) {
 
+    $scope.resetDownload = false;
+
+    $scope.resetButton = function resetButton() {
+      $scope.resetDownload = true;
+    };
+
     $scope.downloadStuffFromAjax = function downloadStuffFromAjax() {
       $http({
         'method': 'GET',
@@ -28,11 +34,13 @@
           response.headers &&
           response.data) {
 
-          var contentType = response.headers('Content-Type');
+          var contentType = response.headers('Content-Type')
+            , contentDisposition = response.headers('Content-Disposition'); /*Gravatar ATM don't send an Access-Control-Expose-Headers header so this value is lost...*/
+          $scope.resetDownload = false;
           $scope.valueThatWillBePopulated = {
             'contentType': contentType,
             'responseData': response.data,
-            'fileName': contentType.split('/')[1]
+            'fileName': 'thisIsTheFileName'
           };
         }
       });

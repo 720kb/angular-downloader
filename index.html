@@ -12,18 +12,29 @@
   <h1 class="center-content color-red font-xx-large">Angularjs Downloader</h1>
   <div class="separator10"></div>
   <h5 class="center-content font-light color-muted">
-    A simple pure angularjs directive to download XHR data
+    A simple angularjs directive to download XHR data
   </h5>
   <div class="separator50"></div>
   <div class="line-compress line-max">
     <div class="line">
       <div class="separator10"></div>
-      <button class="btn btn-medium bg-red color-white radius3" ng-click="downloadStuffFromAjax()" downloader="valueThatWillBePopulated" downloader-classes="bg-red" downloader-custom-text="Download Ready!">
-      <div class="separator3"></div>
-      Download Now!
-      <div class="separator3"></div>
-      </button>
-
+      <div ng-controller="DownloaderController">
+        <div>
+          {{ valueThatWillBePopulated }}
+        </div>
+        <div class="separator10"></div>
+        <div>
+          <a class="btn btn-medium bg-red color-white center-content radius3" ng-click="downloadStuffFromAjax()" downloader="valueThatWillBePopulated" downloader-classes="btn btn-medium center-content bg-success color-white radius3" downloader-custom-text="Download Ready!" downloader-reset="resetDownload">
+            Download Now!
+          </a>
+        </div>
+        <div class="separator10"></div>
+        <div>
+          <button ng-click="resetButton()" class="btn btn-medium bg-blue color-white center-content radius3">
+            Reset the download now
+          </button>
+        </div>
+      </div>
     <div class="separator30"></div>
     <h2>Usage</h2>
     <div class="separator15"></div>
@@ -33,7 +44,7 @@
     </small>
     <div class="separator10"></div>
     <code hljs="">
-<downloader> 
+<downloader>
 //antani
 </downloader>
     </code>

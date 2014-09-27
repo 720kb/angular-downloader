@@ -45,9 +45,23 @@
 
               newElem = $compile(downloadElement)(scope);
               newElem.off('click');
-              elem.replaceWith(newElem);
+
+              elem.css({'display':'none'});
+              elem.after(newElem);
             }
           });
+
+        if (attrs.downloaderReset) {
+
+            scope.$watch(attrs.downloaderReset, function watchListener(newValue) {
+
+              if (newValue) {
+
+                elem.next()[0].remove();
+                elem.css({'display':'block'});
+              }
+            });
+          }
         }
       }
     };
