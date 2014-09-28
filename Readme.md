@@ -21,11 +21,11 @@ Chrome  ![ok](http://i.imgur.com/CK8qxk1.png)
 
 Firefox ![ok](http://i.imgur.com/CK8qxk1.png)
 
-Safari ![ok](http://i.imgur.com/CK8qxk1.png)
+Safari ![no](http://i.imgur.com/hwl3soM.gif?3)
 
 Opera ![ok](http://i.imgur.com/CK8qxk1.png)
 
-IE    ![mmm](http://i.imgur.com/iAIwqCL.png)
+IE    ![no](http://i.imgur.com/hwl3soM.gif?3)
 
 ## Load
 
