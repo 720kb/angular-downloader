@@ -24,6 +24,9 @@ body {
   max-width: 600px;
 }
 /*Backgrounds*/
+.bg-green{
+  background-color: #00DCA1;
+}
 .bg-red{
   background-color:#F52B64;
 }
