@@ -1,5 +1,6 @@
 /*global module*/
 (function setUp(module) {
+ 'use strict';
 
   var banner = ['/*!',
       ' * Angular Downloader v<%= pkg.version %>',

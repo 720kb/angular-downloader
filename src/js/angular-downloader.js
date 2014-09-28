@@ -1,6 +1,6 @@
 /*global angular*/
-
 (function withAngular(angular) {
+  'use strict';
 
   angular.module('720kb.downloader', [])
   .directive('downloader', ['$rootScope', '$compile', '$document', '$window', function manageDirective($rootScope, $compile, $document, $window) {
