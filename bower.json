@@ -12,8 +12,7 @@
     "blob"
   ],
   "license": "MIT",
-  "homepage": "none-atm",
-  "private": true,
+  "homepage": "https://github.com/720kb/angular-downloader",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -2,7 +2,7 @@
   "name": "angular-downloader",
   "version": "0.1.1",
   "description": "A downloader directive for angularjs.",
-  "homepage": "none-atm",
+  "homepage": "https://github.com/720kb/angular-downloader",
   "keywords": [
     "download",
     "ajax",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "none-atm"
+    "url": "git://github.com/720kb/angular-downloader.git"
   },
   "license": "MIT",
   "devDependencies": {
