@@ -46,7 +46,7 @@
               newElem = $compile(downloadElement)(scope);
               newElem.off('click');
 
-              elem.css({'display':'none'});
+              elem.css({'display': 'none'});
               elem.after(newElem);
             }
           });
@@ -58,7 +58,7 @@
               if (newValue) {
 
                 elem.next()[0].remove();
-                elem.css({'display':'block'});
+                elem.css({'display': 'block'});
               }
             });
           }
