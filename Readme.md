@@ -85,7 +85,7 @@ If the button that invokes the XHR is needed again `downloader-reset` can be ass
 
 ##Contributing
 
-We will be much greatful if you help us making this project to grow up.
+We will be much grateful if you help us making this project to grow up.
 Feel free to contribute by forking, opening issues, pull requests etc.
 
 ## License
