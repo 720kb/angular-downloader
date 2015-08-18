@@ -11,9 +11,9 @@ The angular downloader is developed by [720kb](http://720kb.net).
 
 AngularJS v1.2+
 
-## Example
+###Example
 
-###[Live demo](https://720kb.github.io/angular-downloader)
+####[Live demo](https://720kb.github.io/angular-downloader)
 
 ###Browser support
 
@@ -21,7 +21,7 @@ AngularJS v1.2+
 --- | --- | --- | --- | --- |
  ✔ | ✔ | NO | ✔ | NO |
 
-## Load
+###Load
 
 To use the directive, include the javascript file of angular downloader in your web page:
 
@@ -35,9 +35,9 @@ To use the directive, include the javascript file of angular downloader in your 
 </html>
 ```
 
-##Install
+###Install
 
-###Bower installation
+####Bower
 
 ```
 $ bower install angular-downloader --save
@@ -47,7 +47,7 @@ _then load the js files in your html_
 
 ###Add module dependency
 
-Add the 720kb.downloader module dependency
+Add the ```720kb.downloader``` module dependency
 
 ```js
 angular.module('app', [
@@ -55,15 +55,17 @@ angular.module('app', [
  ]);
 ```
 
-
 Call the directive wherever you want in your html page
 
 ```html
-
-<a class="btn btn-medium bg-red color-white center-content radius3" ng-click="downloadStuffFromAjax()" downloader="valueThatWillBePopulated" downloader-classes="btn btn-medium center-content bg-success color-white radius3" downloader-custom-text="Download Ready!" downloader-reset="resetDownload">
+<button type="button" 
+ng-click="downloadStuffFromAjax()" 
+downloader="valueThatWillBePopulated" 
+downloader-classes="btn btn-medium center-content bg-success color-white radius3" 
+downloader-custom-text="Download Ready!" 
+downloader-reset="resetDownload">
   Download Now!
-</a>
-
+</button>
 ```
 ##Options
 Angular downloader allows you to use some options via `attribute` datas.
