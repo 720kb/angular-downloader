@@ -44,14 +44,6 @@ $ bower install angular-downloader --save
 ```
 _then load the js files in your html_
 
-####Npm installation
-
-```
-$ npm install angular-downloader --save
-```
-
-_then load the js files in your html_
-
 ###Add module dependency
 
 Add the ```720kb.downloader``` module dependency
