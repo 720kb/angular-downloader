@@ -37,10 +37,17 @@ To use the directive, include the javascript file of angular downloader in your 
 
 ###Install
 
-####Bower
+####Bower installation
 
 ```
 $ bower install angular-downloader --save
+```
+_then load the js files in your html_
+
+####Npm installation
+
+```
+$ npm install angular-downloader --save
 ```
 
 _then load the js files in your html_
