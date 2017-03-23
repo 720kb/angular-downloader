@@ -7,21 +7,21 @@ Angular Downloader is an angularjs directive that enables you to manage browser 
 
 The angular downloader is developed by [720kb](http://720kb.net).
 
-##Requirements
+## Requirements
 
 AngularJS v1.2+
 
-###Example
+### Example
 
-####[Live demo](https://720kb.github.io/angular-downloader)
+#### [Live demo](https://720kb.github.io/angular-downloader)
 
-###Browser support
+### Browser support
 
 Chrome | Firefox | IE | Opera | Safari
 --- | --- | --- | --- | --- |
  ✔ | ✔ | NO | ✔ | NO |
 
-###Load
+### Load
 
 To use the directive, include the javascript file of angular downloader in your web page:
 
@@ -35,16 +35,16 @@ To use the directive, include the javascript file of angular downloader in your 
 </html>
 ```
 
-###Install
+### Install
 
-####Bower installation
+#### Bower
 
 ```
 $ bower install angular-downloader --save
 ```
 _then load the js files in your html_
 
-###Add module dependency
+### Add module dependency
 
 Add the ```720kb.downloader``` module dependency
 
@@ -66,7 +66,7 @@ downloader-reset="resetDownload">
   Download Now!
 </button>
 ```
-##Options
+## Options
 Angular downloader allows you to use some options via `attribute` datas.
 
 Passing values from the result of an XHR to the directive is done watching a variable in the scope. That name must be provided in the `downloader` attribute value.
@@ -78,7 +78,7 @@ Custom text can be assigned to download button via the `downloader-custom-text` 
 If the button that invokes the XHR is needed again `downloader-reset` can be assigned to a boolean variable.
 
 
-##Contributing
+## Contributing
 
 We will be much grateful if you help us making this project to grow up.
 Feel free to contribute by forking, opening issues, pull requests etc.
