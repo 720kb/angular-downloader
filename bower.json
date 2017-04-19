@@ -1,7 +1,7 @@
 {
   "name": "angular-downloader",
   "main": "dist/angular-downloader.min.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A downloader directive for angularjs.",
   "authors": [
     "Dario Andrei <wouldgo84@gmail.com>",
